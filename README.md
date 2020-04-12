@@ -48,7 +48,7 @@ I chose to order 0.1% resistors and just the MCP1702 voltage regulator, skipping
 * 3x [TE Connectivity H8470KBZA - Metal Film Resistor 470K 0.1%](https://www.mouser.com/ProductDetail/279-H8470KBZA)
 * 3x [TE Connectivity H8680RBYA - Metal Film Resistor 680R 0.1%](https://www.mouser.com/ProductDetail/279-H8680RBYA) 
 * 1x [Microchip MCP1702-5002E/TO - LDO Voltage Regulator 5V 250mA 0.1%](https://www.mouser.com/ProductDetail/579-MCP1702-5002E-TO)  
-* 1x [IQD LFXTAL003240 - 16MHz Quartz](https://www.elfadistrelec.no/en/quartz-tht-16mhz-iqd-lfxtal003240/p/17451701) 
+* 1x [IQD LFXTAL003240 - 16MHz Quartz](https://www.mouser.com/ProductDetail/LFXTAL003240Bulk) 
 
 The concrete changes, referenced to the schematics:
 
