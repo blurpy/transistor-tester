@@ -35,7 +35,7 @@
  *    to match your rotary encoder
  */
 
-//#define HW_ENCODER
+#define HW_ENCODER
 
 
 /*
@@ -57,7 +57,7 @@
  *  - adjust value to match your rotary encoder
  */
 
-#define ENCODER_STEPS    24
+#define ENCODER_STEPS    20
 
 
 /*
@@ -79,7 +79,7 @@
  *    reference
  */
 
-//#define HW_REF25
+#define HW_REF25
 
 
 /*
@@ -111,7 +111,7 @@
  *  - uncomment to enable
  */
 
-//#define HW_ZENER
+#define HW_ZENER
 
 
 /*
@@ -142,7 +142,7 @@
  *  - uncomment to enable
  */
 
-//#define HW_FREQ_COUNTER_BASIC
+#define HW_FREQ_COUNTER_BASIC
 
 
 /*
