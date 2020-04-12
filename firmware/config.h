@@ -283,7 +283,7 @@
  *  - uncomment to enable
  */
 
-#define SW_IR_RECEIVER
+//#define SW_IR_RECEIVER // Disabled to be able to fit in memory
 
 
 /*
