@@ -200,7 +200,7 @@
 #define LCD_ROTATE                      /* switch X and Y (rotate by 90°) */
 //#define LCD_OFFSET_X     4               /* enable x offset of 2 or 4 dots */
 //#define LCD_OFFSET_Y     2               /* enable y offset of 1 or 2 dots */
-//#define LCD_LATE_ON                     /* turn on LCD after clearing it */
+#define LCD_LATE_ON                     /* turn on LCD after clearing it */
 /* font and symbols: horizontally aligned & flipped */
 #define FONT_10X16_HF                   /* 10x16 font */
 //#define FONT_10X16_ISO8859_2_HF         /* 10x16 Central European font */
