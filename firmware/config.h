@@ -79,7 +79,7 @@
  *    reference
  */
 
-#define HW_REF25
+//#define HW_REF25 // Disabled because of MCP1702
 
 
 /*
