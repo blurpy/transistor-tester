@@ -105,8 +105,8 @@ There are 3 configuration files in the firmware that needs to be adjusted. See t
 
 In addition to the build tools that was already installed, I had to add the following packages (in openSUSE):
 
-* avr-libc
-* cross-avr-gcc9
+* `avr-libc`
+* `cross-avr-gcc9`
 
 Then `make` to build.
 
