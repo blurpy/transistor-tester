@@ -61,6 +61,12 @@ The concrete changes, referenced to the schematics:
 * IC3: TL431A voltage reference is not necessary because of MCP1702.
 * R16: Due to missing voltage reference, this 2k2 resistor is not necessary with the m-firmware.
 
+This is how it looks with these changes in place:
+
+<img src="resources/ay-at-no-screen.jpg" width="600px"/>
+
+The 0.1% resistors (black) are a bit thicker than the default (blue), so they overlap a little bit.
+
 
 ## Firmware
 
@@ -123,4 +129,6 @@ Commands:
 * Write flash: `minipro -p "ATMEGA328P@DIP28" -c code -w ComponentTester.hex -e`
 * Write fuses: `minipro -p "ATMEGA328P@DIP28" -c config -w ComponentTester.cfg -e`
 
-That should be it.
+That should be it. This is the finished result:
+
+<img src="resources/ay-at-with-screen.jpg" width="600px"/>
