@@ -70,7 +70,7 @@ The 0.1% resistors (black) are a bit thicker than the default (blue), so they ov
 
 ## Firmware
 
-There are 2 different firmware choices for the transistor tester. The original is the k-firmware. The tester comes with version 1.12k (quite old), and the newest is 1.13k. The k-firmware is no longer being developed. It's been forked into the m-firmware, which is rewritten and with additional features, and still under active development.
+There are 2 different firmware choices for the transistor tester. The original is the k-firmware. The tester comes with version 1.12k (quite old), and the newest is 1.13k. Development of the k-firmware is currently on hold. It's been forked into the m-firmware, which is rewritten and with additional features, and still under active development.
 
 The k-firmware source is available [here](https://www.mikrocontroller.net/svnbrowser/transistortester/Software/trunk/), with precompiled firmware for the AY-AT in the [mega328_color_kit](https://www.mikrocontroller.net/svnbrowser/transistortester/Software/trunk/mega328_color_kit/) directory. There is also a Makefile there with the correct parameters. The source of the m-firmware is available [here](https://www.mikrocontroller.net/svnbrowser/transistortester/Software/Markus/), but only as tarballs. There are no precompiled versions. Both firmwares can also be found [here](https://github.com/madires/Transistortester-Warehouse/tree/master/Firmware).
 
@@ -120,7 +120,7 @@ When build is finished you should have these files, which make up the firmware:
 
 The AY-AT does not have an ISP programming header. It's possible to solder pins on the back of the circuit board like [this](https://www.eevblog.com/forum/testgear/$20-lcr-esr-transistor-checker-project/msg1021401/#msg1021401), but I used a [TL866II Plus](http://www.xgecu.com/en/TL866_main.html) universal programmer together with the [minipro](https://gitlab.com/DavidGriffith/minipro/) open source software for Linux. See https://github.com/blurpy/minipro for more about how to use.
 
-To flash the firmware we need 3 files. The 2 firmware-files from above, and [ComponentTester.cfg](firmware/ComponentTester.cfg). The last file contains the configuration of the fuses of the ATmega328P. The fuse configuration is extracted from the Makefile. To see what the fuse mean you can use this [online calculator](http://www.engbedded.com/fusecalc/).
+To flash the firmware we need 3 files. The 2 firmware-files from above, and [ComponentTester.cfg](firmware/ComponentTester.cfg). The last file contains the configuration of the fuses of the ATmega328P. The fuse configuration is extracted from the Makefile. To see what the fuses mean you can use this [online calculator](http://www.engbedded.com/fusecalc/).
 
 Commands:
 
