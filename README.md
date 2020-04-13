@@ -132,3 +132,8 @@ Commands:
 That should be it. This is the finished result:
 
 <img src="resources/ay-at-with-screen.jpg" width="600px"/>
+
+
+### Calibration
+
+It's recommended to follow the steps described in the readme to run a self test and adjustment. When asked to short the probes I used short breadboard wire between test point 1 and test point 2, and between test point 2 and test point 3 in the ZIF socket. Remember to save from the menu afterwards.
