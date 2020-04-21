@@ -134,6 +134,21 @@ That should be it. This is the finished result:
 <img src="resources/ay-at-with-screen.jpg" width="600px"/>
 
 
+#### Troubleshooting
+
+I initially didn't pay any attention to the output after the compile step:
+
+```
+AVR Memory Usage
+----------------
+Device: atmega328
+
+Program:   34784 bytes (106.2% Full)
+```
+
+It worked fine to flash the firmware, however when trying to start the tester it would quickly flash white on the screen and then turn off. I thought it was a hardware issue at first, but when testing the original firmware it worked. After disabling enough features in this firmware to get below 100% memory it worked fine as well.
+
+
 ### Calibration
 
 It's recommended to follow the steps described in the readme to run a self test and adjustment. When asked to short the probes I used short breadboard wire between test point 1 and test point 2, and between test point 2 and test point 3 in the ZIF socket. Remember to save from the menu afterwards.
