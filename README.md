@@ -103,7 +103,7 @@ There are 3 configuration files in the firmware that needs to be adjusted. See t
 
 ##### Tip for unmodified AY-AT
 
-If you just want to build a new firmware, and don't care for any of the hardware modifications described here you can follow the configuration examples with the following exceptions:
+If you just want to build a new firmware, and don't care for any of the hardware modifications described here you can follow the configuration examples with these exceptions:
 
 * Enable `HW_REF25`
 * Keep `FREQ` set to 8
