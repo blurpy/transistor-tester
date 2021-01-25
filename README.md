@@ -179,6 +179,9 @@ You can find the original firmware [here](firmware/original) if you want to rest
 
 ## Troubleshooting
 
+
+### Flashing white screen
+
 I initially didn't pay any attention to the output after the compile step:
 
 ```
@@ -190,6 +193,11 @@ Program:   34784 bytes (106.2% Full)
 ```
 
 It worked fine to flash the firmware, however when trying to start the tester it would quickly flash white on the screen and then turn off. I thought it was a hardware issue at first, but when testing the original firmware it worked. After disabling enough features in this firmware to get below 100% memory it worked fine as well.
+
+
+### Persistent white screen
+
+When I forgot to configure the screen in `config_328.h` before compiling and flashing, the tester would turn on and display a white screen until power was removed. Easily fixed by adding the correct configuration and trying again.
 
 
 ## Calibration
