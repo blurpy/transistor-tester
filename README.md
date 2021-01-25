@@ -118,18 +118,56 @@ When build is finished you should have these files, which make up the firmware:
 
 ### Flash firmware
 
-The AY-AT does not have an ISP programming header. It's possible to solder pins on the back of the circuit board like [this](https://www.eevblog.com/forum/testgear/$20-lcr-esr-transistor-checker-project/msg1021401/#msg1021401), but I used a [TL866II Plus](http://www.xgecu.com/en/TL866_main.html) universal programmer together with the [minipro](https://gitlab.com/DavidGriffith/minipro/) open source software for Linux. See https://github.com/blurpy/minipro for more about how to use.
-
 To flash the firmware we need 3 files. The 2 firmware-files from above, and [ComponentTester.cfg](firmware/ComponentTester.cfg). The last file contains the configuration of the fuses of the ATmega328P. The fuse configuration is extracted from the Makefile. To see what the fuses mean you can use this [online calculator](http://www.engbedded.com/fusecalc/).
 
-Commands:
+The AY-AT does not support firmware flashing out of the box. There are 2 ways around that.
+
+
+#### 1. Use a chip programmer with a ZIF socket
+
+The first option requires no more modfications to the transistor tester, but you have to remove the chip from the socket and insert it into the programmer every time you want to update the firmware.
+
+I use a [TL866II Plus](http://www.xgecu.com/en/TL866_main.html) universal programmer together with the [minipro](https://gitlab.com/DavidGriffith/minipro/) open source software for Linux. See https://github.com/blurpy/minipro for more about how to use.
+
+With the chip in the programmer, just run these commands:
 
 * Erase chip: `minipro -p "ATMEGA328P@DIP28" -E`
 * Write eeprom: `minipro -p "ATMEGA328P@DIP28" -c data -w ComponentTester.eep -e`
 * Write flash: `minipro -p "ATMEGA328P@DIP28" -c code -w ComponentTester.hex -e`
 * Write fuses: `minipro -p "ATMEGA328P@DIP28" -c config -w ComponentTester.cfg -e`
 
-That should be it. This is the finished result:
+That should be it.
+
+
+#### 2. Add In Circuit Serial Programming (ICSP) header pins
+
+The other option is to solder pins on the back of the circuit board to add the missing ICSP header that lets you flash the firmware in circuit. More work up front, but very useful if you update the firmware often.
+
+I added right angle header pins like this:
+
+<img src="resources/ay-at-icsp-pins.jpg" width="750px"/>
+
+This is the pinout (mirrored compared to above): 
+
+![](resources/atmega328-icsp.png)
+
+There are many different devices that can be used to flash with an ICSP header, like [this example](https://www.eevblog.com/forum/testgear/$20-lcr-esr-transistor-checker-project/msg1021401/#msg1021401) using an Arduino Uno as the programmer, but I'll be using the TL866II Plus mentioned above, as it also supports ICSP mode, with the following pinout:
+
+![](resources/icsp-connection.png)
+
+With wires hooked up between the transistor tester (with power removed) and the programmer, just run these commands:
+
+* Erase chip: `minipro -p "ATMEGA328P@DIP28" -E -i`
+* Write eeprom: `minipro -p "ATMEGA328P@DIP28" -c data -w ComponentTester.eep -e -i`
+* Write flash: `minipro -p "ATMEGA328P@DIP28" -c code -w ComponentTester.hex -e -i`
+* Write fuses: `minipro -p "ATMEGA328P@DIP28" -c config -w ComponentTester.cfg -e -i`
+
+That should be it.
+
+
+#### Result
+
+This is the finished result after flashing the new firmware:
 
 <img src="resources/ay-at-with-screen.jpg" width="600px"/>
 
