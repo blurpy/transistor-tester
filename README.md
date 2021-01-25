@@ -101,6 +101,16 @@ There are 3 configuration files in the firmware that needs to be adjusted. See t
 * Changed `FREQ` to 16 because of my change from 8 to 16MHz crystal.
 
 
+##### Tip for unmodified AY-AT
+
+If you just want to build a new firmware, and don't care for any of the hardware modifications described here you can follow the configuration examples with the following exceptions:
+
+* Enable `HW_REF25`
+* Keep `FREQ` set to 8
+
+This will give you a firmware that runs on a "stock" GM328 AY-AT from Banggood.
+
+
 ### Building
 
 In addition to the build tools that was already installed, I had to add the following packages (in openSUSE):
