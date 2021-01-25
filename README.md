@@ -125,6 +125,25 @@ When build is finished you should have these files, which make up the firmware:
 * `ComponentTester.eep`
 * `ComponentTester.hex`
 
+And the compiler output should end with something like this:
+
+```
+AVR Memory Usage
+----------------
+Device: atmega328
+
+Program:   32234 bytes (98.4% Full)
+(.text + .data + .bootloader)
+
+Data:        248 bytes (12.1% Full)
+(.data + .bss + .noinit)
+
+EEPROM:      738 bytes (72.1% Full)
+(.eeprom)
+```
+
+If any of these are more than 100% full you have too much enabled in the firmware and it will not work.
+
 
 ### Flash firmware
 
