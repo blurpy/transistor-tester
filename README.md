@@ -30,14 +30,14 @@ To improve the accuracy of the tester there are some simple modifications you ca
 
 See also [this post on eevblog](https://www.eevblog.com/forum/testgear/$20-lcr-esr-transistor-checker-project/msg1286025/#msg1286025).
 
-From the [readme of the k-firmware](https://github.com/madires/Transistortester-Warehouse/blob/master/Documentation/ttester-1.13k.English.pdf):
+From the [readme of the k-firmware](https://github.com/madires/Transistortester-Warehouse/blob/master/Documentation/English/ttester-1.13k.pdf):
 
 "_The resistors R1 to R6 are critical for measurements and this 680Ω and 470kΩ resistors should be
  measurement type resistors (tolerance of 0.1%) to get the full accuracy._"
  
 "_The additional 2.5V precision voltage reference connected at pin PC4 (ADC4) can be used to check and calibrate the VCC voltage, but is not required. You can use a LM4040-AIZ2.5 (0.1%), a LT1004CZ-2.5 (0.8%) or a LM336-Z2.5 (0.8%) as voltage reference. If you don’t install the precision voltage reference and you don’t add the relay extension, you should install a pull up resistor R16 to PC4 with a higher resistance value (47kΩ). This helps the software to detect the missing voltage reference._"
 
-From the [readme of the m-firmware](https://github.com/madires/Transistortester-Warehouse/blob/master/Documentation/ctester-1.39m.English.pdf):
+From the [readme of the m-firmware](https://github.com/madires/Transistortester-Warehouse/blob/master/Documentation/English/ctester-1.42m.pdf):
  
 "_The external 2.5V voltage reference should be only enabled if it's at least 10 times more precise than the voltage regulator. Otherwise it would make the results worse. If you're using a MCP1702 with a typical tolerance of 0.4% as voltage regulator you really don't need a 2.5V voltage reference._"
  
@@ -74,7 +74,7 @@ There are 2 different firmware choices for the transistor tester. The original i
 
 The k-firmware source is available [here](https://www.mikrocontroller.net/svnbrowser/transistortester/Software/trunk/), with precompiled firmware for the AY-AT in the [mega328_color_kit](https://www.mikrocontroller.net/svnbrowser/transistortester/Software/trunk/mega328_color_kit/) directory. There is also a Makefile there with the correct parameters. The source of the m-firmware is available [here](https://www.mikrocontroller.net/svnbrowser/transistortester/Software/Markus/), but only as tarballs. There are no precompiled versions. Both firmwares can also be found [here](https://github.com/madires/Transistortester-Warehouse/tree/master/Firmware).
 
-I chose to use the m-firmware, due to it still being actively developed. The newest version at the time of writing is 1.39m.
+I chose to use the m-firmware, due to it still being actively developed. The newest version at the time of writing is 1.42m.
 
 
 ### Configuration
