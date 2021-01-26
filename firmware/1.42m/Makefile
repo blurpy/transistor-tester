@@ -2,7 +2,7 @@
 #  Makefile
 #
 #  (c) 2012-2020 by Markus Reschke
-#  based on code from Markus Frejek and Karl-Heinz Kübbeler
+#  based on code from Markus Frejek and Karl-Heinz Kï¿½bbeler
 #
 
 PROJECT = ComponentTester
@@ -29,7 +29,7 @@ MCU = atmega328
 # - 8MHz  : 8
 # - 16MHz : 16
 # - 20MHz : 20
-FREQ = 8
+FREQ = 16
 
 # oscillator type
 # - internal RC oscillator      : RC
