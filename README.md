@@ -231,4 +231,14 @@ When I forgot to configure the screen in `config_328.h` before compiling and fla
 
 ## Calibration
 
-It's recommended to follow the steps described in the readme to run a self test and adjustment. When asked to short the probes I used short breadboard wire between test point 1 and test point 2, and between test point 2 and test point 3 in the ZIF socket. Remember to save from the menu afterwards.
+After flashing a new firmware it's recommended to follow the steps described in the readme to run a self adjustment.
+
+Short summary of the steps:
+
+1. Power on the tester
+1. Measure a film capacitor with a value between 100nF and 3.3μF at least three times
+1. Go into the menu and select `Adjustment`
+1. Follow the steps
+1. Select `Save` in the menu and choose slot #1
+
+When asked to short the probes I used short breadboard wire between test point 1 and test point 2, and between test point 2 and test point 3 in the ZIF socket. 
