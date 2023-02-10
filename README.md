@@ -30,14 +30,14 @@ To improve the accuracy of the tester there are some simple modifications you ca
 
 See also [this post on eevblog](https://www.eevblog.com/forum/testgear/$20-lcr-esr-transistor-checker-project/msg1286025/#msg1286025).
 
-From the [readme of the k-firmware](https://github.com/madires/Transistortester-Warehouse/blob/master/Documentation/English/ttester-1.13k.pdf):
+From the [readme of the k-firmware](https://github.com/madires/Transistortester-Warehouse/blob/c0500aac2903605629e2a8220e84601f41bbb996/Documentation/English/ttester-1.13k.pdf):
 
 "_The resistors R1 to R6 are critical for measurements and this 680Ω and 470kΩ resistors should be
  measurement type resistors (tolerance of 0.1%) to get the full accuracy._"
  
 "_The additional 2.5V precision voltage reference connected at pin PC4 (ADC4) can be used to check and calibrate the VCC voltage, but is not required. You can use a LM4040-AIZ2.5 (0.1%), a LT1004CZ-2.5 (0.8%) or a LM336-Z2.5 (0.8%) as voltage reference. If you don’t install the precision voltage reference and you don’t add the relay extension, you should install a pull up resistor R16 to PC4 with a higher resistance value (47kΩ). This helps the software to detect the missing voltage reference._"
 
-From the [readme of the m-firmware](https://github.com/madires/Transistortester-Warehouse/blob/master/Documentation/English/ctester-1.42m.pdf):
+From the [readme of the m-firmware](https://github.com/madires/Transistortester-Warehouse/blob/fa49c65b10776e03cae0820f099aabf5765ec81f/Documentation/English/ctester-1.42m.pdf):
  
 "_The external 2.5V voltage reference should be only enabled if it's at least 10 times more precise than the voltage regulator. Otherwise it would make the results worse. If you're using a MCP1702 with a typical tolerance of 0.4% as voltage regulator you really don't need a 2.5V voltage reference._"
  
